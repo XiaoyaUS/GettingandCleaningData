@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Getting and Cleaning Data
 
 ## Course Project
@@ -18,8 +17,3 @@ R script run_analysis.R does the following.
 2. Run ```source("run_analysis.R")```, it will generate a new file ```tiny_data.txt``` in your working directory.
 
 
-
-=======
-# GettingandCleaningData
-Getting and Cleaning Data Project
->>>>>>> 419a9595c758055603281fdb86ece90c119d4665
