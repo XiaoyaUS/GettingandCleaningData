@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting and Cleaning Data
 
 ## Course Project
@@ -18,3 +19,7 @@ R script run_analysis.R does the following.
 
 
 
+=======
+# GettingandCleaningData
+Getting and Cleaning Data Project
+>>>>>>> 419a9595c758055603281fdb86ece90c119d4665
