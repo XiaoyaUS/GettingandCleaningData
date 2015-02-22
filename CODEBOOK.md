@@ -72,13 +72,13 @@ There are 5 steps:
 
 ## ```run_analysis.R``` implementation Detailes
 
-1 Download file from web and unzip it and read data from files
-2 Subset only mean and std data
-3 Load activity labels
-4.Bind data
-5 Merge test and train data
-6 Calculate mean for each subject and activity.
-7 write tidy_data to text file tidy_data.txt.
+1. Download file from web and unzip it and read data from files
+2. Subset only mean and std data
+3. Load activity labels
+4. Bind data
+5. Merge test and train data
+6. Calculate mean for each subject and activity.
+7. write tidy_data to text file tidy_data.txt.
 
 ## tidy data set description 
 
@@ -90,85 +90,85 @@ Activity_Label: There are six activities. Values are:
 
 We Calculated mean for each subject and activity. 
 
-Column Name                     Description
+Column Name                             Description
 subject                         	subject                         
-Activity_Label                 	Activity_Label                 
-tBodyAcc-mean()-X               Mean of tBodyAcc-mean()-X               
-tBodyAcc-mean()-Y              	Mean of tBodyAcc-mean()-Y              
-tBodyAcc-mean()-Z               Mean of tBodyAcc-mean()-Z               
-tBodyAcc-std()-X               	Mean of tBodyAcc-std()-X               
-tBodyAcc-std()-Y                Mean of tBodyAcc-std()-Y                
-tBodyAcc-std()-Z               	Mean of tBodyAcc-std()-Z               
-tGravityAcc-mean()-X            Mean of tGravityAcc-mean()-X            
-tGravityAcc-mean()-Y           	Mean of tGravityAcc-mean()-Y           
-tGravityAcc-mean()-Z            Mean of tGravityAcc-mean()-Z            
-tGravityAcc-std()-X            	Mean of tGravityAcc-std()-X            
-tGravityAcc-std()-Y             Mean of tGravityAcc-std()-Y             
-tGravityAcc-std()-Z            	Mean of tGravityAcc-std()-Z            
-tBodyAccJerk-mean()-X           Mean of tBodyAccJerk-mean()-X           
-tBodyAccJerk-mean()-Y          	Mean of tBodyAccJerk-mean()-Y          
-tBodyAccJerk-mean()-Z           Mean of tBodyAccJerk-mean()-Z           
-tBodyAccJerk-std()-X           	Mean of tBodyAccJerk-std()-X           
-tBodyAccJerk-std()-Y            Mean of tBodyAccJerk-std()-Y            
-tBodyAccJerk-std()-Z           	Mean of tBodyAccJerk-std()-Z           
-tBodyGyro-mean()-X              Mean of tBodyGyro-mean()-X              
-tBodyGyro-mean()-Y             	Mean of tBodyGyro-mean()-Y             
-tBodyGyro-mean()-Z              Mean of tBodyGyro-mean()-Z              
-tBodyGyro-std()-X              	Mean of tBodyGyro-std()-X              
-tBodyGyro-std()-Y               Mean of tBodyGyro-std()-Y               
-tBodyGyro-std()-Z              	Mean of tBodyGyro-std()-Z              
-tBodyGyroJerk-mean()-X          Mean of tBodyGyroJerk-mean()-X          
-tBodyGyroJerk-mean()-Y         	Mean of tBodyGyroJerk-mean()-Y         
-tBodyGyroJerk-mean()-Z          Mean of tBodyGyroJerk-mean()-Z          
-tBodyGyroJerk-std()-X          	Mean of tBodyGyroJerk-std()-X          
-tBodyGyroJerk-std()-Y           Mean of tBodyGyroJerk-std()-Y           
-tBodyGyroJerk-std()-Z          	Mean of tBodyGyroJerk-std()-Z          
-tBodyAccMag-mean()              Mean of tBodyAccMag-mean()              
-tBodyAccMag-std()              	Mean of tBodyAccMag-std()              
-tGravityAccMag-mean()           Mean of tGravityAccMag-mean()           
-tGravityAccMag-std()           	Mean of tGravityAccMag-std()           
-tBodyAccJerkMag-mean()          Mean of tBodyAccJerkMag-mean()          
-tBodyAccJerkMag-std()          	Mean of tBodyAccJerkMag-std()          
-tBodyGyroMag-mean()             Mean of tBodyGyroMag-mean()             
-tBodyGyroMag-std()             	Mean of tBodyGyroMag-std()             
-tBodyGyroJerkMag-mean()         Mean of tBodyGyroJerkMag-mean()         
-tBodyGyroJerkMag-std()         	Mean of tBodyGyroJerkMag-std()         
-fBodyAcc-mean()-X               Mean of fBodyAcc-mean()-X               
-fBodyAcc-mean()-Y              	Mean of fBodyAcc-mean()-Y              
-fBodyAcc-mean()-Z               Mean of fBodyAcc-mean()-Z               
-fBodyAcc-std()-X               	Mean of fBodyAcc-std()-X               
-fBodyAcc-std()-Y                Mean of fBodyAcc-std()-Y                
-fBodyAcc-std()-Z               	Mean of fBodyAcc-std()-Z               
-fBodyAcc-meanFreq()-X           Mean of fBodyAcc-meanFreq()-X           
-fBodyAcc-meanFreq()-Y          	Mean of fBodyAcc-meanFreq()-Y          
-fBodyAcc-meanFreq()-Z           Mean of fBodyAcc-meanFreq()-Z           
-fBodyAccJerk-mean()-X          	Mean of fBodyAccJerk-mean()-X          
-fBodyAccJerk-mean()-Y           Mean of fBodyAccJerk-mean()-Y           
-fBodyAccJerk-mean()-Z          	Mean of fBodyAccJerk-mean()-Z          
-fBodyAccJerk-std()-X            Mean of fBodyAccJerk-std()-X            
-fBodyAccJerk-std()-Y           	Mean of fBodyAccJerk-std()-Y           
-fBodyAccJerk-std()-Z            Mean of fBodyAccJerk-std()-Z            
-fBodyAccJerk-meanFreq()-X      	Mean of fBodyAccJerk-meanFreq()-X      
-fBodyAccJerk-meanFreq()-Y       Mean of fBodyAccJerk-meanFreq()-Y       
-fBodyAccJerk-meanFreq()-Z      	Mean of fBodyAccJerk-meanFreq()-Z      
-fBodyGyro-mean()-X              Mean of fBodyGyro-mean()-X              
-fBodyGyro-mean()-Y             	Mean of fBodyGyro-mean()-Y             
-fBodyGyro-mean()-Z              Mean of fBodyGyro-mean()-Z              
-fBodyGyro-std()-X              	Mean of fBodyGyro-std()-X              
-fBodyGyro-std()-Y               Mean of fBodyGyro-std()-Y               
-fBodyGyro-std()-Z              	Mean of fBodyGyro-std()-Z              
-fBodyGyro-meanFreq()-X          Mean of fBodyGyro-meanFreq()-X          
-fBodyGyro-meanFreq()-Y         	Mean of fBodyGyro-meanFreq()-Y         
-fBodyGyro-meanFreq()-Z          Mean of fBodyGyro-meanFreq()-Z          
-fBodyAccMag-mean()             	Mean of fBodyAccMag-mean()             
-fBodyAccMag-std()               Mean of fBodyAccMag-std()               
-fBodyAccMag-meanFreq()         	Mean of fBodyAccMag-meanFreq()         
-fBodyBodyAccJerkMag-mean()      Mean of fBodyBodyAccJerkMag-mean()      
-fBodyBodyAccJerkMag-std()      	Mean of fBodyBodyAccJerkMag-std()      
-fBodyBodyAccJerkMag-meanFreq()  Mean of fBodyBodyAccJerkMag-meanFreq()  
-fBodyBodyGyroMag-mean()        	Mean of fBodyBodyGyroMag-mean()        
-fBodyBodyGyroMag-std()          Mean of fBodyBodyGyroMag-std()          
-fBodyBodyGyroMag-meanFreq()    	Mean of fBodyBodyGyroMag-meanFreq()    
-fBodyBodyGyroJerkMag-mean()     Mean of fBodyBodyGyroJerkMag-mean()     
-fBodyBodyGyroJerkMag-std()     	Mean of fBodyBodyGyroJerkMag-std()     
-fBodyBodyGyroJerkMag-meanFreq()	Mean of fBodyBodyGyroJerkMag-meanFreq()
+Activity_Label                 	        Activity_Label                 
+tBodyAcc-mean()-X                       Mean of tBodyAcc-mean()-X               
+tBodyAcc-mean()-Y              	        Mean of tBodyAcc-mean()-Y              
+tBodyAcc-mean()-Z                       Mean of tBodyAcc-mean()-Z               
+tBodyAcc-std()-X               	        Mean of tBodyAcc-std()-X               
+tBodyAcc-std()-Y                        Mean of tBodyAcc-std()-Y                
+tBodyAcc-std()-Z               	        Mean of tBodyAcc-std()-Z               
+tGravityAcc-mean()-X                    Mean of tGravityAcc-mean()-X            
+tGravityAcc-mean()-Y           	        Mean of tGravityAcc-mean()-Y           
+tGravityAcc-mean()-Z                    Mean of tGravityAcc-mean()-Z            
+tGravityAcc-std()-X            	        Mean of tGravityAcc-std()-X            
+tGravityAcc-std()-Y                     Mean of tGravityAcc-std()-Y             
+tGravityAcc-std()-Z            	        Mean of tGravityAcc-std()-Z            
+tBodyAccJerk-mean()-X                   Mean of tBodyAccJerk-mean()-X           
+tBodyAccJerk-mean()-Y          	        Mean of tBodyAccJerk-mean()-Y          
+tBodyAccJerk-mean()-Z                   Mean of tBodyAccJerk-mean()-Z           
+tBodyAccJerk-std()-X           	        Mean of tBodyAccJerk-std()-X           
+tBodyAccJerk-std()-Y                    Mean of tBodyAccJerk-std()-Y            
+tBodyAccJerk-std()-Z           	        Mean of tBodyAccJerk-std()-Z           
+tBodyGyro-mean()-X                      Mean of tBodyGyro-mean()-X              
+tBodyGyro-mean()-Y             	        Mean of tBodyGyro-mean()-Y             
+tBodyGyro-mean()-Z                      Mean of tBodyGyro-mean()-Z              
+tBodyGyro-std()-X              	        Mean of tBodyGyro-std()-X              
+tBodyGyro-std()-Y                       Mean of tBodyGyro-std()-Y               
+tBodyGyro-std()-Z              	        Mean of tBodyGyro-std()-Z              
+tBodyGyroJerk-mean()-X                  Mean of tBodyGyroJerk-mean()-X          
+tBodyGyroJerk-mean()-Y         	        Mean of tBodyGyroJerk-mean()-Y         
+tBodyGyroJerk-mean()-Z                  Mean of tBodyGyroJerk-mean()-Z          
+tBodyGyroJerk-std()-X          	        Mean of tBodyGyroJerk-std()-X          
+tBodyGyroJerk-std()-Y                   Mean of tBodyGyroJerk-std()-Y           
+tBodyGyroJerk-std()-Z          	        Mean of tBodyGyroJerk-std()-Z          
+tBodyAccMag-mean()                      Mean of tBodyAccMag-mean()              
+tBodyAccMag-std()              	        Mean of tBodyAccMag-std()              
+tGravityAccMag-mean()                   Mean of tGravityAccMag-mean()           
+tGravityAccMag-std()           	        Mean of tGravityAccMag-std()           
+tBodyAccJerkMag-mean()                  Mean of tBodyAccJerkMag-mean()          
+tBodyAccJerkMag-std()          	        Mean of tBodyAccJerkMag-std()          
+tBodyGyroMag-mean()                     Mean of tBodyGyroMag-mean()             
+tBodyGyroMag-std()             	        Mean of tBodyGyroMag-std()             
+tBodyGyroJerkMag-mean()                 Mean of tBodyGyroJerkMag-mean()         
+tBodyGyroJerkMag-std()         	        Mean of tBodyGyroJerkMag-std()         
+fBodyAcc-mean()-X                       Mean of fBodyAcc-mean()-X               
+fBodyAcc-mean()-Y              	        Mean of fBodyAcc-mean()-Y              
+fBodyAcc-mean()-Z                       Mean of fBodyAcc-mean()-Z               
+fBodyAcc-std()-X               	        Mean of fBodyAcc-std()-X               
+fBodyAcc-std()-Y                        Mean of fBodyAcc-std()-Y                
+fBodyAcc-std()-Z               	        Mean of fBodyAcc-std()-Z               
+fBodyAcc-meanFreq()-X                   Mean of fBodyAcc-meanFreq()-X           
+fBodyAcc-meanFreq()-Y          	        Mean of fBodyAcc-meanFreq()-Y          
+fBodyAcc-meanFreq()-Z                   Mean of fBodyAcc-meanFreq()-Z           
+fBodyAccJerk-mean()-X          	        Mean of fBodyAccJerk-mean()-X          
+fBodyAccJerk-mean()-Y                   Mean of fBodyAccJerk-mean()-Y           
+fBodyAccJerk-mean()-Z          	        Mean of fBodyAccJerk-mean()-Z          
+fBodyAccJerk-std()-X                    Mean of fBodyAccJerk-std()-X            
+fBodyAccJerk-std()-Y           	        Mean of fBodyAccJerk-std()-Y           
+fBodyAccJerk-std()-Z                    Mean of fBodyAccJerk-std()-Z            
+fBodyAccJerk-meanFreq()-X      	        Mean of fBodyAccJerk-meanFreq()-X      
+fBodyAccJerk-meanFreq()-Y               Mean of fBodyAccJerk-meanFreq()-Y       
+fBodyAccJerk-meanFreq()-Z      	        Mean of fBodyAccJerk-meanFreq()-Z      
+fBodyGyro-mean()-X                      Mean of fBodyGyro-mean()-X              
+fBodyGyro-mean()-Y             	        Mean of fBodyGyro-mean()-Y             
+fBodyGyro-mean()-Z                      Mean of fBodyGyro-mean()-Z              
+fBodyGyro-std()-X              	        Mean of fBodyGyro-std()-X              
+fBodyGyro-std()-Y                       Mean of fBodyGyro-std()-Y               
+fBodyGyro-std()-Z              	        Mean of fBodyGyro-std()-Z              
+fBodyGyro-meanFreq()-X                  Mean of fBodyGyro-meanFreq()-X          
+fBodyGyro-meanFreq()-Y         	        Mean of fBodyGyro-meanFreq()-Y         
+fBodyGyro-meanFreq()-Z                  Mean of fBodyGyro-meanFreq()-Z          
+fBodyAccMag-mean()             	        Mean of fBodyAccMag-mean()             
+fBodyAccMag-std()                       Mean of fBodyAccMag-std()               
+fBodyAccMag-meanFreq()         	        Mean of fBodyAccMag-meanFreq()         
+fBodyBodyAccJerkMag-mean()              Mean of fBodyBodyAccJerkMag-mean()      
+fBodyBodyAccJerkMag-std()      	        Mean of fBodyBodyAccJerkMag-std()      
+fBodyBodyAccJerkMag-meanFreq()          Mean of fBodyBodyAccJerkMag-meanFreq()  
+fBodyBodyGyroMag-mean()        	        Mean of fBodyBodyGyroMag-mean()        
+fBodyBodyGyroMag-std()                  Mean of fBodyBodyGyroMag-std()          
+fBodyBodyGyroMag-meanFreq()    	        Mean of fBodyBodyGyroMag-meanFreq()    
+fBodyBodyGyroJerkMag-mean()             Mean of fBodyBodyGyroJerkMag-mean()     
+fBodyBodyGyroJerkMag-std()     	        Mean of fBodyBodyGyroJerkMag-std()     
+fBodyBodyGyroJerkMag-meanFreq()	        Mean of fBodyBodyGyroJerkMag-meanFreq()
