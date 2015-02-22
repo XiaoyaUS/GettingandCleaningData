@@ -17,3 +17,4 @@ R script run_analysis.R does the following.
 2. Run ```source("run_analysis.R")```, it will generate a new file ```tiny_data.txt``` in your working directory.
 
 
+

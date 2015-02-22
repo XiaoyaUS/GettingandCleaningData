@@ -53,10 +53,12 @@ train_data <- cbind(as.data.table(subject_train), y_train, X_train_subset)
 data = rbind(test_data, train_data)
 
 ## calculate mean for each subject and activity.
-id_labels = c("subject", "Activity_ID", "Activity_Label")
-data_labels = setdiff(colnames(data), id_labels)
-melt_data = melt(data, id = id_labels, measure.vars = data_labels)
-tidy_data = dcast(melt_data, subject + Activity_Label ~ variable, mean)
+id_labels <- c("subject", "Activity_ID", "Activity_Label")
+data_labels <-  setdiff(colnames(data), id_labels)
+melt_data <- melt(data, id = id_labels, measure.vars = data_labels)
+tidy_data <- dcast(melt_data, subject + Activity_Label ~ variable, mean)
+ 
+## write tidy_data to text file
 write.table(tidy_data, file = "./tidy_data.txt",  row.name=FALSE) 
 
 
